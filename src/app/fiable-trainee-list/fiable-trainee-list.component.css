@@ -1,0 +1,15 @@
+#employeeTable {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+botton {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}

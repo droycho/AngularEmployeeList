@@ -1,0 +1,25 @@
+
+<table class="table" id="employeeTable">
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Salary ($)</th>
+        <th>Designation</th>
+        <th>Credits</th>
+        <th>Eligible for Promotion</th>
+    </tr>
+    <tr *ngFor="let tempTrainee of traineeList">
+        <td>{{tempTrainee.getEmployeeID()}}</td>
+        <td>{{tempTrainee.getEName()}}</td>
+        <td>{{tempTrainee.getSalary() | currency: 'USD'}}</td>
+        <td>{{tempTrainee.getDesignation()}}</td>
+        <td>{{tempTrainee.getCredits()}}</td>
+        <td>
+            <div *ngIf="tempTrainee.getSalary() > 9000 && tempTrainee.getCredits() > 5; else elseBlock">
+            YES
+            </div>
+            <ng-template #elseBlock>NO</ng-template>
+        </td>
+        
+    </tr>
+</table>
