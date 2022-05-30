@@ -1,8 +1,10 @@
 <h1>Trainee List:</h1>
 
 <app-fiable-trainee-list></app-fiable-trainee-list>
-<button (click)="toggle = !toggle" id="addBtn">Add Employee</button>
+<button (click)="btnClicked()" id="addBtn">{{btnVal}}</button>
 <div *ngIf="toggle; else formComp">
     <!-- <ng-template #formComp> SHOW FORM</ng-template> -->
 </div>
-<ng-template #formComp> SHOW FORM</ng-template>
+<ng-template #formComp>
+    <app-fiable-trainee-form></app-fiable-trainee-form>
+</ng-template>
