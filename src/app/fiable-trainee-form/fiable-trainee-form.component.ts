@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-fiable-trainee-form',
@@ -7,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiableTraineeFormComponent implements OnInit {
 
+  employeeID= new FormControl('');
+  eName= new FormControl('');
+  salary= new FormControl('');
+  designation= new FormControl('');
+  credits= new FormControl('');
   constructor() { }
 
   ngOnInit(): void {

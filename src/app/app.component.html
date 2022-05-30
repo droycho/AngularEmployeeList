@@ -2,9 +2,7 @@
 
 <app-fiable-trainee-list></app-fiable-trainee-list>
 <button (click)="btnClicked()" id="addBtn">{{btnVal}}</button>
-<div *ngIf="toggle; else formComp">
-    <!-- <ng-template #formComp> SHOW FORM</ng-template> -->
-</div>
+<div *ngIf="toggle; else formComp"></div>
 <ng-template #formComp>
     <app-fiable-trainee-form></app-fiable-trainee-form>
 </ng-template>

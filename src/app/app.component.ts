@@ -12,9 +12,11 @@ export class AppComponent {
 
   btnClicked() {
     this.toggle = !this.toggle;
-    if(this.btnVal == "Add Trainee")
+    if(this.btnVal == "Add Trainee"){
       this.btnVal = "Submit Trainee";
-    else
+    }
+    else{
       this.btnVal = "Add Trainee";
+    }
   }
 }
