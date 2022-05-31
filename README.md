@@ -1,10 +1,11 @@
-# Comp1
+# Fiable Consulting Inc - Training May '22
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+This is a simple Angular Single-Page Application that features a list of trainees that can be displayed in one component and updated to add more trainees from another component. When the list is displayed, simple logic using ngIf statements are used to determine eligibility for promotion. Components communicate with each other using @Input/@Output properties to pass data and EventEmitters to call each other's functions.
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. A new browser tab should open to `http://localhost:4200/`, or navigate there manually. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
