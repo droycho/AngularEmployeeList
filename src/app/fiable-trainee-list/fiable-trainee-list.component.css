@@ -7,3 +7,13 @@
 table, th, td {
     border: 1px solid;
 }
+
+#addBtn {
+    position: absolute;
+    left: 50%;
+}
+
+app-new-trainee-form {
+    position: absolute;
+    margin-left: 20%;
+}
