@@ -1,4 +1,5 @@
-# Employee List - Overview
+# Employee List  
+## Overview
 
 This is a simple Angular Single-Page Application that features a list of employees that can be displayed in one component, and updated to add more employees from another component. The form component is displayed/hidden on a button click from the list component. When the list is displayed, simple logic using \*ngIf statements are used to determine eligibility for promotion. Components communicate with each other using @Input/@Output properties to pass data and EventEmitters to call each other's functions.
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
@@ -21,5 +22,5 @@ The child accesses the parent's function with an EventEmitter in an `@Output` de
 * Form Control:  
 User input is read using `[FormControl]="varName"` attributes in the component's input tags and assigning the variables as `new FormControl('')`. Once the input is obtained, their actual values are set to the Trainee's fields with appropriate types by using `this.varName.value` as the argument for the setters.  
 * Encapsulation:  
-Features object-oriented encapsulation enforcement through the use of private variables and getters/setters.
+Features object-oriented encapsulation through the use of private variables and getters/setters.
 
