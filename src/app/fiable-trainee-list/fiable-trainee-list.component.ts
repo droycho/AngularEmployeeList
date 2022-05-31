@@ -9,7 +9,7 @@ import { Trainee } from './trainee';
 export class FiableTraineeListComponent implements OnInit {
   idCounter: number = 0;
   toggle:boolean =true;
-  btnVal: string = "Add Trainee";
+  btnVal: string = "Add Employee";
   traineeList: Trainee[] = [
     new Trainee(this.idCounter++, "DJ", 90000, "Engineer", 12),
     new Trainee(this.idCounter++, "Jake", 30000, "Broker", 12),
@@ -31,11 +31,11 @@ export class FiableTraineeListComponent implements OnInit {
 
   btnClicked() {
     this.toggle = !this.toggle;
-    if(this.btnVal == "Add Trainee"){
+    if(this.btnVal == "Add Employee"){
       this.btnVal = "Cancel";
     }
     else{
-      this.btnVal = "Add Trainee";
+      this.btnVal = "Add Employee";
     }
   }
 
