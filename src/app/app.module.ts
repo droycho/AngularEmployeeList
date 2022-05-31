@@ -4,13 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FiableTraineeListComponent } from './fiable-trainee-list/fiable-trainee-list.component';
-import { FiableTraineeFormComponent } from './fiable-trainee-form/fiable-trainee-form.component';
+import { NewTraineeFormComponent } from './fiable-trainee-list/new-trainee-form/new-trainee-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiableTraineeListComponent,
-    FiableTraineeFormComponent
+    NewTraineeFormComponent
   ],
   imports: [
     BrowserModule,

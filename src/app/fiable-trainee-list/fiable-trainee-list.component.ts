@@ -8,6 +8,8 @@ import { Trainee } from './trainee';
 })
 export class FiableTraineeListComponent implements OnInit {
   idCounter: number = 0;
+  toggle:boolean =true;
+  btnVal: string = "Add Trainee";
   traineeList: Trainee[] = [
     new Trainee(this.idCounter++, "DJ", 90000, "Engineer", 12),
     new Trainee(this.idCounter++, "Jake", 30000, "Broker", 12),
@@ -25,6 +27,16 @@ export class FiableTraineeListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  btnClicked() {
+    this.toggle = !this.toggle;
+    if(this.btnVal == "Add Trainee"){
+      this.btnVal = "Submit Trainee";
+    }
+    else{
+      this.btnVal = "Add Trainee";
+    }
   }
 
 }

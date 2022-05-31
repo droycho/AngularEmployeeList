@@ -1,0 +1,17 @@
+<h3>Add A New Trainee:</h3>
+<label for="eid">Employee ID: </label>
+<input id="eid" type="number" [formControl]="employeeID" placeholder="000">
+<br>
+<label for="ename">Employee Name: </label>
+<input id="ename" type="text" [formControl]="eName" placeholder="John Doe">
+<br>
+<label for="salary">Salary: </label>
+<input id="salary" type="number" [formControl]="salary" placeholder="0">
+<br>
+<label for="designation">Designation: </label>
+<input id="designation" type="text" [formControl]="designation" placeholder="Job Title">
+<br>
+<label for="credits">Credits: </label>
+<input id="credits" type="number" [formControl]="credits" placeholder="0">
+<br>
+<button type="button" (click)="onSubmit()">{{btnTxt}}</button>

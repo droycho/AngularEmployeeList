@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FiableTraineeFormComponent } from './fiable-trainee-form.component';
+import { NewTraineeFormComponent } from './new-trainee-form.component';
 
-describe('FiableTraineeFormComponent', () => {
-  let component: FiableTraineeFormComponent;
-  let fixture: ComponentFixture<FiableTraineeFormComponent>;
+describe('NewTraineeFormComponent', () => {
+  let component: NewTraineeFormComponent;
+  let fixture: ComponentFixture<NewTraineeFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FiableTraineeFormComponent ]
+      declarations: [ NewTraineeFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FiableTraineeFormComponent);
+    fixture = TestBed.createComponent(NewTraineeFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

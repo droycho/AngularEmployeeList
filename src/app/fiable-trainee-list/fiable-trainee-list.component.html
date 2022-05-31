@@ -23,3 +23,8 @@
         
     </tr>
 </table>
+<button (click)="btnClicked()" id="addBtn">{{btnVal}}</button>
+<div *ngIf="toggle; else formComp"></div>
+<ng-template #formComp>
+    <app-new-trainee-form [traineeList]="traineeList"></app-new-trainee-form>
+</ng-template>
