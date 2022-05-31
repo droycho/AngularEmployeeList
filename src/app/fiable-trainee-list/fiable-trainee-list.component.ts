@@ -11,16 +11,15 @@ export class FiableTraineeListComponent implements OnInit {
   toggle:boolean =true;
   btnVal: string = "Add Employee";
   traineeList: Trainee[] = [
-    new Trainee(this.idCounter++, "DJ", 90000, "Engineer", 12),
-    new Trainee(this.idCounter++, "Jake", 30000, "Broker", 12),
-    new Trainee(this.idCounter++, "John", 40000, "Mason", 3),
-    new Trainee(this.idCounter++, "Kelly", 1000000, "Doctor", 12),
-    new Trainee(this.idCounter++, "Russell", 30000, "Mechanic", 8),
-    new Trainee(this.idCounter++, "Kim", 8999, "Designer", 12),
-    new Trainee(this.idCounter++, "Dylan", 9000, "Engineer", 12),
-    new Trainee(this.idCounter++, "Paul", 9001, "Cop", 6),
-    new Trainee(this.idCounter++, "Aladdin", 10000, "Thief", 5),
-    new Trainee(this.idCounter++, "Jaffar", 30000, "Wizard", 4),
+    new Trainee(this.idCounter++, "PassOne", 9001, "HTML", 6), //over;over
+    new Trainee(this.idCounter++, "FailTwo", 9001, "CSS", 5), //over; equal
+    new Trainee(this.idCounter++, "FailThree", 9001, "Javascript", 4), //over; under
+    new Trainee(this.idCounter++, "FailFour", 9000, "Typescript", 6), //equal; over
+    new Trainee(this.idCounter++, "FailFive", 9000, "Angular", 5), //equal; equal
+    new Trainee(this.idCounter++, "FailSix", 9000, "JDBC", 4), //equal;under
+    new Trainee(this.idCounter++, "FailSeven", 8999, "Ruby", 6), //under;over
+    new Trainee(this.idCounter++, "FailEight", 8999, "Java", 5), //under equal
+    new Trainee(this.idCounter++, "FailNine", 8999, "Sprint Boot", 4) //under;under
   ];
 
   constructor() { 
