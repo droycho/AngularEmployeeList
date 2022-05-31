@@ -37,10 +37,8 @@ export class NewTraineeFormComponent implements OnInit {
       this.newTrainee.setSalary(this.salary.value);
       this.newTrainee.setDesignation(this.designation.value);
       this.newTrainee.setCredits(this.credits.value);
+      this.tlist.push(this.newTrainee);
     }
-    console.log("Submit new trainee: ", this.newTrainee);
-    this.tlist.push(this.newTrainee);
-    // this.toggle = !this.toggle;
     this.submitted.emit('submitted');
   }
 }

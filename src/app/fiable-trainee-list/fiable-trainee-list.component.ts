@@ -40,7 +40,6 @@ export class FiableTraineeListComponent implements OnInit {
   }
 
   newSubmission(event: any){
-    console.log(event);
     this.btnClicked();
   }
 
