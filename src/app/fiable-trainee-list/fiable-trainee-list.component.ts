@@ -32,11 +32,16 @@ export class FiableTraineeListComponent implements OnInit {
   btnClicked() {
     this.toggle = !this.toggle;
     if(this.btnVal == "Add Trainee"){
-      this.btnVal = "Submit Trainee";
+      this.btnVal = "Cancel";
     }
     else{
       this.btnVal = "Add Trainee";
     }
+  }
+
+  newSubmission(event: any){
+    console.log(event);
+    this.btnClicked();
   }
 
 }

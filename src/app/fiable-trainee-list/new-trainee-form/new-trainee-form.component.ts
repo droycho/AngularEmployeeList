@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { EventEmitter } from '@angular/core';
 import { Trainee } from '../trainee';
 
 @Component({
@@ -16,9 +17,12 @@ export class NewTraineeFormComponent implements OnInit {
   newTrainee: Trainee;
   btnTxt: string = "SUBMIT";
   @Input()
-  trainee!: Trainee;
+  toggle!: boolean;
   @Input('traineeList')
   tlist!: Trainee[];
+  @Output()
+  submitted = new EventEmitter();
+
   constructor() {
     this.newTrainee = new Trainee(0, "John Doe", 0, "No Job", 0);
    }
@@ -36,5 +40,7 @@ export class NewTraineeFormComponent implements OnInit {
     }
     console.log("Submit new trainee: ", this.newTrainee);
     this.tlist.push(this.newTrainee);
+    // this.toggle = !this.toggle;
+    this.submitted.emit('submitted');
   }
 }
