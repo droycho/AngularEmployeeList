@@ -17,11 +17,11 @@ export class NewTraineeFormComponent implements OnInit {
   newTrainee: Trainee;
   btnTxt: string = "SUBMIT";
   @Input()
-  toggle!: boolean;
+    toggle!: boolean;
   @Input('traineeList')
-  tlist!: Trainee[];
+    tlist!: Trainee[];
   @Output()
-  submitted = new EventEmitter();
+    submitted = new EventEmitter();
 
   constructor() {
     this.newTrainee = new Trainee(0, "John Doe", 0, "No Job", 0);
