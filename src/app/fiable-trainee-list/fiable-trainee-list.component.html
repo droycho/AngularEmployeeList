@@ -1,29 +1,33 @@
 
 <table class="table" id="employeeTable">
-    <tr>
-        <th>Employee ID</th>
-        <th>Name</th>
-        <th>Salary ($)</th>
-        <th>Designation</th>
-        <th>Credits</th>
-        <th>Eligible for Promotion</th>
-    </tr>
-    <tr *ngFor="let tempTrainee of traineeList">
-        <td>{{tempTrainee.getEmployeeID()}}</td>
-        <td>{{tempTrainee.getEName()}}</td>
-        <td>{{tempTrainee.getSalary() | currency: 'USD'}}</td>
-        <td>{{tempTrainee.getDesignation()}}</td>
-        <td>{{tempTrainee.getCredits()}}</td>
-        <td>
-            <div *ngIf="tempTrainee.getSalary() > 9000 && tempTrainee.getCredits() > 5; else elseBlock">
-            YES
-            </div>
-            <ng-template #elseBlock>NO</ng-template>
-        </td>
-        
-    </tr>
+    <caption>Promotion eligibility: Salary over $9000 and credits over 5.</caption>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Salary ($)</th>
+            <th>Designation</th>
+            <th>Credits</th>
+            <th>Eligible for Promotion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempTrainee of traineeList">
+            <td>{{tempTrainee.getEmployeeID()}}</td>
+            <td>{{tempTrainee.getEName()}}</td>
+            <td>{{tempTrainee.getSalary() | currency: 'USD'}}</td>
+            <td>{{tempTrainee.getDesignation()}}</td>
+            <td>{{tempTrainee.getCredits()}}</td>
+            <td>
+                <div *ngIf="tempTrainee.getSalary() > 9000 && tempTrainee.getCredits() > 5; else elseBlock">
+                YES
+                </div>
+                <ng-template #elseBlock>NO</ng-template>
+            </td>
+        </tr>
+    </tbody> 
 </table>
-<button (click)="btnClicked()" id="addBtn">{{btnVal}}</button>
+<button (click)="btnClicked()" id="addBtn" type="button" class="btn btn-primary">{{btnVal}}</button>
 <div *ngIf="toggle; else formComp"></div>
 <ng-template #formComp>
     <app-new-trainee-form 
