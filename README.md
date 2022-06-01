@@ -24,3 +24,7 @@ User input is read using `[FormControl]="varName"` attributes in the component's
 * Encapsulation:  
 Features object-oriented encapsulation through the use of private variables and getters/setters.
 
+## Known Bugs & Issues
+
+* Random Employee ID number is generated between 0-9999 on each instance the user submits a new employee without specifying an employee ID. This means it is possible to generate two or more matching employee IDs.
+
