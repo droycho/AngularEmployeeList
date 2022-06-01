@@ -6,7 +6,7 @@ This is a simple Angular Single-Page Application that features a list of employe
 
 ## Using the Program
 
-* Ensure Nodejs and @angular/cli are both properly installed in your system.  
+* Ensure `Nodejs` and `@angular/cli` are both properly installed in your system.  
 1. Clone the repository or download the project .zip file and extract its contents.  
 2. Open a terminal/command line window and navigate to the root directory of the project.  
 3. Enter the command `npm start`.  
