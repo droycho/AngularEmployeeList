@@ -16,8 +16,6 @@ export class NewTraineeFormComponent implements OnInit {
   credits= new FormControl('');
   newTrainee: Trainee;
   btnTxt: string = "SUBMIT";
-  @Input()
-    toggle!: boolean;
   @Input('traineeList')
     tlist!: Trainee[];
   @Output()
