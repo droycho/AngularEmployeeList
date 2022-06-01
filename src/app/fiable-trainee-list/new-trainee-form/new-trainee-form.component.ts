@@ -24,19 +24,30 @@ export class NewTraineeFormComponent implements OnInit {
     submitted = new EventEmitter();
 
   constructor() {
-    this.newTrainee = new Trainee(0, "John Doe", 0, "No Job", 0);
+    this.newTrainee = new Trainee(0, "No Name", 0, "No Job", 0);
    }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    if(this.employeeID.value != ''){
-      this.newTrainee.setEmployeeID(this.employeeID.value);
-      this.newTrainee.setEName(this.eName.value);
-      this.newTrainee.setSalary(this.salary.value);
-      this.newTrainee.setDesignation(this.designation.value);
-      this.newTrainee.setCredits(this.credits.value);
+    if(this.employeeID.value != '' || 
+    this.eName.value != '' ||
+    this.salary.value != '' ||
+    this.designation.value != '' ||
+    this.credits.value != ''){
+      if(this.employeeID.value != '')
+        this.newTrainee.setEmployeeID(this.employeeID.value);
+      else 
+        this.newTrainee.setEmployeeID(Math.floor(Math.random() * (9999)));
+      if(this.eName.value != '')
+        this.newTrainee.setEName(this.eName.value);
+      if(this.salary.value != '')
+        this.newTrainee.setSalary(this.salary.value);
+      if(this.designation.value != '')
+        this.newTrainee.setDesignation(this.designation.value);
+      if(this.credits.value != '')
+        this.newTrainee.setCredits(this.credits.value);
       this.tlist.push(this.newTrainee);
     }
     this.submitted.emit('submitted');
