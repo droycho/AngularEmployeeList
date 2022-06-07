@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Trainee } from './trainee';
+import { FiableTraineeServiceService } from './fiable-trainee-service.service';
 
 @Component({
   selector: 'app-fiable-trainee-list',
@@ -7,22 +8,12 @@ import { Trainee } from './trainee';
   styleUrls: ['./fiable-trainee-list.component.css']
 })
 export class FiableTraineeListComponent implements OnInit {
-  idCounter: number = 0;
   toggle:boolean =true;
   btnVal: string = "Add Employee";
-  traineeList: Trainee[] = [
-    new Trainee(this.idCounter++, "TestOne", 9001, "Over/Over", 6), //over;over
-    new Trainee(this.idCounter++, "TestTwo", 9001, "Over/Equal", 5), //over; equal
-    new Trainee(this.idCounter++, "TestThree", 9001, "Over/Under", 4), //over; under
-    new Trainee(this.idCounter++, "TestFour", 9000, "Equal/Over", 6), //equal; over
-    new Trainee(this.idCounter++, "TestFive", 9000, "Equal/Equal", 5), //equal; equal
-    new Trainee(this.idCounter++, "TestSix", 9000, "Equal/Under", 4), //equal;under
-    new Trainee(this.idCounter++, "TestSeven", 8999, "Under/Over", 6), //under;over
-    new Trainee(this.idCounter++, "TestEight", 8999, "Under/Equal", 5), //under equal
-    new Trainee(this.idCounter++, "TestNine", 8999, "Under/Under", 4) //under;under
-  ];
+  traineeList: Trainee[];
 
-  constructor() { 
+  constructor(traineeService: FiableTraineeServiceService) { 
+    this.traineeList = traineeService.getTrainees();
   }
 
   ngOnInit(): void {

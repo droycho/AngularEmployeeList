@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FiableTraineeListComponent } from './fiable-trainee-list/fiable-trainee-list.component';
 import { NewTraineeFormComponent } from './fiable-trainee-list/new-trainee-form/new-trainee-form.component';
+import { FiableTraineeServiceService } from './fiable-trainee-list/fiable-trainee-service.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { NewTraineeFormComponent } from './fiable-trainee-list/new-trainee-form/
     BrowserModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    FiableTraineeServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
