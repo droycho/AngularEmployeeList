@@ -11,7 +11,7 @@ export class FiableTraineeListComponent implements OnInit {
   toggle:boolean =true;
   btnVal: string = "Add Employee";
   traineeList: Trainee[];
-
+  isActive = true;
   constructor(traineeService: FiableTraineeServiceService) { 
     this.traineeList = traineeService.getTrainees();
   }
@@ -21,6 +21,7 @@ export class FiableTraineeListComponent implements OnInit {
 
   btnClicked() {
     this.toggle = !this.toggle;
+    this.isActive = !this.isActive;
     if(this.btnVal == "Add Employee"){
       this.btnVal = "Cancel";
     }

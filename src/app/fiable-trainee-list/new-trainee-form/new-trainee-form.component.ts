@@ -50,4 +50,8 @@ export class NewTraineeFormComponent implements OnInit {
     }
     this.submitted.emit('submitted');
   }
+
+  onKeyUp(tid:any){
+    console.log(tid);
+  }
 }

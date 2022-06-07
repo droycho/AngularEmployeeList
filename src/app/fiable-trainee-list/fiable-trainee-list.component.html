@@ -27,7 +27,15 @@
         </tr>
     </tbody> 
 </table>
-<button (click)="btnClicked()" id="addBtn" type="button" class="btn btn-primary">{{btnVal}}</button>
+<button (click)="btnClicked()" 
+    [style.backgroundColor]="isActive? 'blue' : 'red'"
+    id="addBtn" 
+    type="button" 
+    class="btn btn-primary"
+    [class.active]="isActive">
+    {{btnVal}}
+</button>
+
 <div *ngIf="toggle; else formComp"></div>
 <ng-template #formComp>
     <app-new-trainee-form 

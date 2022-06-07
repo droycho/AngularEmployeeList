@@ -34,11 +34,14 @@
     </div>
     <div class="form-group">
         <label for="credits">Credits: </label>
-        <input id="credits" 
+        <input
+            #tid 
+            id="credits" 
             type="number" 
             [formControl]="credits" 
             placeholder="0" 
-            class="form-control">
+            class="form-control"
+            (keyup.enter)="onKeyUp(tid.value)">
     </div>
     <button type="button" (click)="onSubmit()" class="btn btn-success">{{btnTxt}}</button>
 </form>
